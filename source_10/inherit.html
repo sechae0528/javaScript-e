@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        //A() 함수 
+        function A() { }
+        //프로토타입 객체에 printA 메서드 추가
+        A.prototype.printA = function () {
+            alert('A');
+        }
+
+        //B() 함수 
+        function B() { }
+        //B.prototype에 A() 생성자 함수를 통해 생성된 객체를 대입함으로써
+        //새로 생성된 객체를 통해 B와 A의 프로토타입 객체가 연결됨 
+        B.prototype = new A();
+        //프로토타입 객체에 printB 메서드 추가
+        B.prototype.printB = function () {           
+            alert('B');
+        }
+
+        //C() 함수 
+        function C() { }
+        //C.prototype에 B() 생성자 함수를 통해 생성된 객체를 대입함으로써
+        //새로 생성된 객체를 통해 C와 B의 프로토타입 객체가 연결됨 
+        //C -> B -> A로 연결되는 프로토타입 체인 형성 
+        C.prototype = new B();
+        //프로토타입 객체에 printC 메서드 추가
+        C.prototype.printC = function () {
+            alert('C');
+        }
+
+        //C() 생성자 함수를 통해 o 객체 생성 
+        var o = new C();
+
+        //프로토타입 체이닝을 통해 메서드 호출 
+        o.printA();
+        o.printB();
+        o.printC();
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

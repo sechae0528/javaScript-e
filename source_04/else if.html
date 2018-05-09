@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+
+        //사용자로부터 입력을 받아 변수에 저장 
+        var number1 = prompt('숫자1을 입력하세요', '');
+        var number2 = prompt('숫자2를 입력하세요', '');
+
+        //입력받은 문자열을 숫자로 변환하여 재선언
+        number1 = Number(number1);
+        number2 = Number(number2);
+
+        //조건문 
+        if (number1 > number2) {
+            //첫 번째 입력받은 수가 두 번째 입력받은 수보다 클 때 실행
+            alert(number1 + ' >' + number2);
+        } else if (number1 == number2) {
+            //첫 번째 입력받은 수와 두 번째 입력받은 수가 같을 때 실행
+            //if의 조건의 결과가 false일 때 실행 
+            alert(number1 + ' = ' + number2);
+        } else {
+            //첫 번째 입력받은 수가 두 번째 입력받은 수보다 작을 때 실행
+            //if와 ele if의 조건의 결과가 false일 때 실행 
+            alert(number1 + ' < ' + number2);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var today = new Date().getDay();
+
+        //조건문 
+        //첫 번째 case문과 같은 방식으로 나머지도 동작함.
+        //요일은 일~토요일 이외의 것은 존재하지 않으므로, default문을 기술하지 않음
+        switch (today) {
+            case 0:
+                //getDay() 메서드를 통해 반환된 값이 0일 때 today에 일요일 저장 
+                today = '일요일';
+                //위 문장 실행후 switch문을 빠져나감
+                 break;
+            case 1:
+                today = '월요일';
+                break;
+            case 2:
+                today = '화요일';
+                break;
+            case 3:
+                today = '수요일';
+                break;
+            case 4:
+                today = '목요일';
+                break;
+            case 5:
+                today = '금요일';
+                break;
+            case 6:
+                today = '토요일';
+                break;
+        }
+        alert(today);
+    </script>
+</head>
+<body>
+</body>
+</html>

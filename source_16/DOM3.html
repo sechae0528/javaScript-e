@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <!--HTML 태그 작성--> 
+    <h3 id="heading1">좋은 날</h3>
+    <h3 id="heading2">행복한 날</h3>
+    //스크립트 시작
+    <script>
+        window.onload = function () {
+            //getElementById()를 이용해 문서 객체 가져오기 
+            var heading1 = document.getElementById('heading1');
+            var heading2 = document.getElementById('heading2');
+
+            //innerHTML 속성을 이용한 문자열 변경 
+            heading1.innerHTML = 'Good day';
+            //속성에 값을 지정하여 문자색 변경 
+            heading2.style.color = 'blue';
+        }
+    </script>
+</body>
+</html>

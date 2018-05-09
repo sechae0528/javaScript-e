@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        //함수 선언 
+        function showTime() {
+            //현재의 시간으로 초기화하여 생성된 Date 객체를 now에 저장 
+            var now = new Date();
+            //시간을 hour에 저장 
+            var hour = now.getHours();
+            //분을 minute에 저장  
+            var minute = now.getMinutes();
+            //초를 seconde에 저장 
+            var second = now.getSeconds();
+
+            //오전과 오후를 나타낼 수 있도록 si에 저장 
+            var si = '';
+            if (hour < 12) {
+                si = '오전';
+            } else {
+                si = '오후';
+                hour = hour - 12;
+            }
+
+            //0시면 즉, 자정이면 시를 12시와 오전으로 설정 
+            if (hour == 0) {
+                hour = 12;
+                si = '오전'
+            }
+
+            //10분 미만이면 앞에 0을 추가
+            if (minute < 10) {
+                minute = '0' + minute;
+            }
+            //10초 미만이면 앞에 0을 추가 
+            if (second < 10) {
+                second = '0' + second;
+            }
+
+            //시간을 리턴 
+            return si + '  ' + hour + ' : ' + minute + ' : ' + second;
+        }
+
+        //1초마다 showTime()함수를 호출하여 시간을 알리는 대화상자 출력 
+        var intervalID= setInterval(function () {
+            alert(showTime())
+        }, 1000);
+
+        //6초 뒤 setInterval()함수 종료 
+        setTimeout(function () {
+            clearInterval(intervalID);
+        }, 6000);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

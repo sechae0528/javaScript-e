@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        //car 객체 생성
+        var car = {
+            //속성 추가
+            name: 'car1',
+            model: 400,
+            color: 'black',
+            //메서드 추가
+            run : function(){
+                alert(this.name + '   is running.');
+            }
+        };
+
+        //student 객체 생성 
+        var student = {
+            //속성 추가 
+            name: '홍길동'
+        }
+
+        //student 객체의 run() 메서드로 추가 
+        //추가된 run() 메서드는 car 객체의 run() 메서드와 동일  
+        student.run = car.run;
+
+        //car 객체의 run() 메서드 호출 
+        //this는 run()메서드를 호출 한(마침표 앞의) car 객체를 참조
+        //car1 is running을 출력 
+        car.run();
+
+        //student 객체의 run() 메서드 호출 
+        //this는 run()메서드를 호출 한(마침표 앞의) student 객체를 참조
+        //홍길동 is running을 출력 
+        student.run();
+    </script>
+
+
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+﻿<html>
+<head>
+    <title> My title </title>
+</head>
+<body>
+    <h1>My text</h1>
+    <a href="http://hrdi.ekoreatech.ac.kr/">Good</a>
+    <script>
+        window.onload = function () {
+            //a 태그의 문서 객체 가져오기
+            var anchor = document.getElementsByTagName('a');
+            //a 태그의 속성 제거
+            anchor[0].removeAttribute('href');
+
+            //h1 태그의 문서 객체 가져오기
+            var heading = document.getElementsByTagName('h1');
+            //h1 문서 객체의 부모 노드를 지정하여 h1 문서 객체 제거
+            //parentNode를 통해 삭제하고자 하는 문서 객체의 부모 노드 확인 
+            heading[0].parentNode.removeChild(heading[0]);
+        }
+    </script>
+</body>
+</html>
+

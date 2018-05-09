@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+        //요소 노드(문서 객체) 생성 
+        var image = document.createElement('img');
+        //image 문서 객체의 속성값 지정 
+        image.src = 'image.jpg';
+        image.width = 200;
+        image.height = 350;
+
+        //body 문서 객체에 image 문서 객체 연결 
+        document.body.appendChild(image);
+
+        //image 문서 객체의 src 속성 지정 
+        function changeImage() {
+            image.setAttribute('src', 'image2.jpg')
+        }
+    </script>
+
+   <!-- 이미지 변경을 위한 버튼으로 클릭 시 changeImage() 함수 호출 -->
+   <input type="button" onclick="changeImage()" value="이미지 변경" />
+
+</body>
+</html>

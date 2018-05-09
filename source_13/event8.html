@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>  
+    <script>
+        window.onload = function () {
+            //문서 객체 가져오기
+            var form = document.getElementById('form');
+            var password = document.getElementById('password');
+            var check = document.getElementById('password-check');
+
+            //유효성 검사 
+            form.onsubmit = function () {
+                if (password.value == check.value) {
+                } else {
+                    alert('비밀번호를 다시 입력해주세요');
+                    //기본 이벤트 제거 
+                    return false;
+                };
+            };
+        };
+    </script>
+</head>
+<body>
+    <form id="form" action="eventTest.html">
+        <p>아이디 <input id="id" type="text" /></p>
+        <p>비밀번호 <input id="password" type="password" /></p>
+        <p>비밀번호 확인 <input id="password-check" type="password" /></p>
+        <p><input id="Submit1" type="submit" value="제출" /></p>
+    </form>
+</body>
+</html>

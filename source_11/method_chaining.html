@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        //string1에 문자열을 할당하여 선언 
+        var string1 = 'Ability is decided by one`s own effort.';
+        var out = '';
+
+        //string1 전체를 toUpperCase()메서드에서 대문자로 리턴되는 값을 다시 string1에 저장하여 string1 변경
+        string1 = string1.toUpperCase();
+        //string1 출력 
+        alert(string1);
+    
+        //메서드 체이닝 
+        //toLowerCase() 메서드의 소문자로 변환되어 리턴된 문자열 
+        //toLowerCase() 메서드의 리턴된 문자열 중 substring 메서드를 이용하여 일부 추출
+        //일부 추출된 문자열 중 match 메서드를 이용하여 일치하는 문자열이 있는지 확인 
+        out = string1.toLowerCase().substring(1, 15).match('li');
+        alert(out);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

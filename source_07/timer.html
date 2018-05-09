@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        //1초 마다 '1초 간격' 메시지를 출력 
+        //반환되는 타이머 아이디를 intervalID에 저장 
+        var intervalID = setInterval(function () {
+            alert('1초 간격');
+        }, 1000);
+       
+        //5초뒤 clearInterval(intervalID);를 실행하여
+        //메시지 출력을 중단하게 함 
+        setTimeout(function () {
+            clearInterval(intervalID);
+        }, 5000);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

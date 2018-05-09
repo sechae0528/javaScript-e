@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>C 프로그래밍</title>
+	<link type="text/css" rel="stylesheet" href="common/css/main.css" />
+	<script language = "javascript">
+		var strFilePath = location.href.split('/');//mainFrame의 html 파라미터 값
+		
+		var strFileName = strFilePath[(strFilePath.length - 3)];//차시 번호 가져오기
+		
+		var strPageNameBase = strFilePath[(strFilePath.length - 1)];//html 이름가져오기
+		var strPageName = strPageNameBase.split('.')[0];
+		var strSelect = strPageName.split('n')[1];//파일 구분 번호 가져오기
+		
+		var DW_F_Name = strFileName+"_"+strSelect;
+	
+		
+		var chap = opener.chap;
+		function down(){
+			//window.open("01_02.zip");
+			window.open(DW_F_Name+".zip");
+			}
+	</script>
+</head>
+
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" style="overflow:hidden;">
+	<table width="250" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+			<td>
+				<img src="datadown.jpg" width="250" height="200" border="0" usemap="#Map" />
+				<map name="Map">
+<area shape="rect" coords="55,88,194,131" href="javascript:down();">
+					<area shape="rect" coords="187,176,248,198" href="#" onClick=window.close();>
+				</map>
+			</td>
+	  </tr>
+	</table>
+</body>
+</html>

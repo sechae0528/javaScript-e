@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <script>
+        //h1 태그인 요소 노드 생성 
+        var heading = document.createElement('h1');
+        //텍스트 노드 생성 
+        var text = document.createTextNode('Have a nice day');
+
+        //요소 노드에 텍스트 노드 연결 
+        //HTML 문서에서 " <h1> Have a nice day </h1>"과 동일한 효과 
+        heading.appendChild(text);
+        //body 태그에 h1 태그 연결
+        //body 문서 객체에 heading 문서 객체 추가 
+        document.body.appendChild(heading);
+    </script>
+</body>
+</html>

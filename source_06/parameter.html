@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function parameter() {
+            //반환할 값을 위한 변수 out 선언            
+            var out = '';
+            //입력받은 매개변수를 저장한 배열 argument의 길이를 통해 
+            //입력받은 매개변수의 수를 할당한 변수 length 
+            var length = arguments.length;
+
+            //조건문
+            if (length == 0) {
+                //입력받은 매개변수가 없을 때 실행할 문장
+                out += 'Zero';
+            } else if (length == 1) {
+                //입력받은 매개변수가 한 개일때 실행할 문장
+                out += 'One';
+            } else {
+                //입력받은 매개변수가 2개 이상일때 실행할 문장
+                out += 'Else';
+            }
+            // out 값을 돌려줌 
+            return out;
+        }
+
+        //함수호출의 결과를 output에 저장 후 출력 
+        var output = parameter(1);
+        alert(output);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <!--id가 heading1인 h3 태그-->
+    <h3 id="heading1">좋은 날</h3>   
+
+    <!--스크립트 시작-->
+    <script>
+        window.onload = function () {
+            //getElementById() 메서드를 이용해 일치하는 id를 가지는 문서 객체를 가져옴 
+            var heading1 = document.getElementById('heading1');
+
+            //heading1 문서 객체의 색 지정
+            heading1.style.color = 'blue';
+
+            //heading1 문서 객체의 테두리 두께와 색 지정 
+            heading1.style.border = '3px red';
+
+            //heading1 문서 객체의 테두리 스타일 지정 
+            heading1.style['border-style'] = 'dotted';
+
+            //body 문서 객체의 배경색 지정 
+            document.body.style.backgroundColor = 'green';
+        }
+    </script>
+</body>
+</html>
