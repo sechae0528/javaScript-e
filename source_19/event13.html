@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        try {
+            //존재하지 않는 window 객체의 test 메서드를 호출하여 오류 발생
+            window.test();
+        } catch (exception) {
+            //변수 out에 발생한 예외의 속성과 속성값 저장
+            var out='';
+            for (var i in exception) {
+                out += i + '  :  ' + exception[i] + '\n';
+            }
+            alert(out);
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

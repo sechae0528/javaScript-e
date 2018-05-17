@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title> 
+</head>
+<body>
+    <h3 id="heading1">좋은 날</h3>
+    <script>
+        //문서 객체 가져오기 
+        var heading = document.getElementById('heading1');
+
+       
+        heading.onmouseover = function () {
+            //this 키워드를 이용하여 이벤트 발생 객체 알아보기 
+            var out = '이벤트 발생 객체\n';
+            out += this;
+            alert(out);
+
+            //this 키워드를 이용하여 이벤트 발생 객체 스타일 변경 
+            this.innerHTML = 'Good day';
+            this.style.color = 'blue';
+        };       
+    </script>
+</body>
+</html>

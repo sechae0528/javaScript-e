@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        window.onload = function () {
+            var button = document.getElementById('button');
+            var heading = document.getElementById('heading');
+            function whenClick1() {
+                heading.innerHTML = '행복한 날';
+            };
+            function whenClick2() {
+                heading.style.color = 'blue';
+            };
+            if (button.attachEvent) {
+                button.attachEvent('onclick', whenClick1);
+                button.attachEvent('onclick', whenClick2);
+            } else {
+                button.addEventListener('click', whenClick1);
+                button.addEventListener('click', whenClick2);
+            };
+        };
+    </script>
+</head>
+<body>
+    <input id="button" type="button" value="이벤트" />
+    <h5 id="heading">좋은 날</h5>
+</body>
+</html>

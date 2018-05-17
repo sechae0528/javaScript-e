@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function checkNumber() {
+            var input, num;
+            input = document.getElementById('input');
+            num = input.value;
+            try {
+                //강제 예외 발생 
+                if (num == '' || isNaN(num)) {
+                    throw 'Err1';
+                } else if (num < 2 || num > 10) {
+                    throw 'Err2';
+                }
+            } catch (exception) {
+                //강제 발생된 예외에 따른 다른 처리 
+                if (exception == 'Err1') {
+                    alert('숫자를 입력해 주세요');
+                }
+                if (exception == 'Err2') {
+                    alert('2와 10사이 입력');
+                }
+            } finally {
+                input.value = '';
+                input.focus();
+            }
+        }
+    </script>
+</head>
+<body>
+    <h6> 2와 10사이의 숫자를 입력해 주세요.</h6>
+    <input id="input" type="text" />
+    <input id="check" type="button" value="확인" onclick="checkNumber()"/>
+</body>
+</html>

@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title> 
+</head>
+<body>
+    <h3 id="heading1">좋은 날</h3>
+    <!--스크립트 시작-->
+    <script>
+        //문서 객체 가져오기 
+        var heading = document.getElementById('heading1');
+
+        //heading 문서 객체 위로 마우스 포인트가 이동해 mouseover 이벤트가 발생했을 때
+        //onmouseover 속성에 처리할 코드를 함수를 이용하여 정의 
+        heading.onmouseover = function () {
+            alert('happy');
+            
+            //mouseover 이벤트 제거 
+            heading.onmouseover = null;
+        };
+    </script>
+</body>
+</html>

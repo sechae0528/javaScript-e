@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        window.onload = function () {
+            //문서 객체 가져오기 
+            var button = document.getElementById('button');
+            var heading = document.getElementById('heading');
+
+            //이벤트 리스너 whenClick1(), whenClick2() 작성 
+            function whenClick1() {
+                heading.innerHTML = '행복한 날';
+            };
+            function whenClick2() {
+                heading.style.color = 'blue';
+            };
+
+            //button 문서 객체의 click 이벤트에 이벤트 리스너 연결 
+            button.addEventListener('click', whenClick1);
+            button.addEventListener('click', whenClick2);
+
+            // 추가되었던 이벤트 리스너 제거 
+            button.removeEventListener('click', whenClick2);
+        };
+    </script>
+</head>
+<body>
+    <input id="button" type="button" value="이벤트" />
+    <h5 id="heading">좋은 날</h5>
+</body>
+</html>

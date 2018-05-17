@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        try {
+            //실행할 코드 
+            alert('exception1');
+            alert('exception2');
+        } catch (exception) {
+            //예외 발생시 실행할 코드 
+            alert('예외 발생');
+        } finally {
+            //예외 여부와 상관없이 실행할 코드 
+            //사용한 메모리 정리 등 프로그램을 정리할 목적으로 많이 사용 
+            alert('예외 처리 종료');
+        };
+    </script>
+</head>
+<body>
+
+</body>
+</html>

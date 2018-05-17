@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <h3 id="heading1">좋은 날</h3>
+    <script>
+        //문서 객체 가져오기 
+        var heading = document.getElementById('heading1');
+
+        //브라우저에서 생성한 이벤트 객체 내용 알아보기
+        heading.onmouseover = function (evt) {
+            var out = '';
+            //브라우저에 따라 이벤트 객체 전달 방식이 달라
+            //매개 변수로 받은 객체가 존재하는지 여부에 따라 event에 객체 지정 
+            var event = evt || window.event;
+
+            for (var i in event) {
+                out += '<h6>' + i + ' : ' + event[i] + '</h6>';
+            };
+
+            document.writeln(out);
+        };
+    </script>
+    
+</body>
+</html>
