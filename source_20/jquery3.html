@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="jquery-1.11.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            //다음 라인에 주석 처리된 구문은 클래스가 test인 엘리먼트들 선택하는 것임  
+            //$('.test').css('color', 'red');
+
+            // test와 test2 두 개의 클래스를 가지는 엘리먼트 선택 
+            $('.test.test2').css('color', 'blue');
+        });
+    </script>
+
+</head>
+<body>
+    <h5 class="test">변명 중에서도 가장 어리석고 못난 변명은</h5>
+    <h5 class="test">"시간이 없어서" 하는 변명입니다.</h5>
+    <h6 class="test test2">by 에디슨</h6>
+</body>
+</html>
