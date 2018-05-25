@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="jquery-1.11.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // 매개 변수로 입력한 HTML 문자열로 변수 p 초기화 
+            // var p = '<p> Good day </p>';
+
+            // 각 메서드를 이용하여 HTML 문자열(문서 객체) 삽입
+            // $('h4').append(p);
+            // $('h4').prepend(p);
+            // $('h4').before(p);
+            // $('h4').after(p);
+
+            // 삽입 메서드를 이용한 문서 객체의 이동 
+            $('h4').after($('h6'));
+        });
+    </script>
+</head>
+<body>  
+    <h4>One</h4>
+    <h4>Two</h4>
+    <h5>Three</h5>
+    <h6>Four</h6>    
+</body>
+</html>

@@ -1,0 +1,61 @@
+﻿<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        .outer {   
+            background-color:lightblue;           
+        }
+        .inner {
+            width: 200px;
+            height: 100px;
+            background-color: lightgreen;
+            margin: 10px auto;
+        }
+    </style>
+    <script src="jquery-1.11.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // mouseover 이벤트 확인 
+            var count = 0;
+            $('.outer').mouseover(function () {
+                $('p:first').text('mouse over');
+                $('span').text(++count);
+            });
+            $('.outer').mouseout(function () {
+                $('p:first').text('mouse out');
+            });
+            $('.inner').mouseover(function () {
+                $('p:last').text('mouse over');
+            });
+            $('.inner').mouseout(function () {
+                $('p:last').text('mouse out');
+            });
+
+            //mouseenter 이벤트 확인 
+            /*
+            var count = 0;
+            $('.outer').mouseenter(function () {
+                $('p:first').text('mouse enter');
+                $('span').text(++count);
+            });
+            $('.outer').mouseleave(function () {
+                $('p:first').text('mouse leave');
+            });
+            $('.inner').mouseenter(function () {
+                $('p:last').text('mouse enter');
+            });
+            $('.inner').mouseleave(function () {
+                $('p:last').text('mouse leave');
+            });
+            */
+        });
+    </script>
+</head>
+<body>
+   <div class="outer">
+       <p>mouse</p><span>0</span>
+       <div class="inner"> <p>mouse</p></div>
+   </div>
+</body>
+</html>

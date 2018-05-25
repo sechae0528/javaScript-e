@@ -1,0 +1,20 @@
+﻿<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="jquery-1.11.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var count = 0;
+            // on() 메서드의 두 번째 매개 변수를 이용하여 이벤트 연결 범위 한정 
+            $('body').on('click','p', function () {
+                $('<p>좋은 날  ' + (++count) + '</p>').appendTo('body');
+            });
+        });
+    </script>
+</head>
+<body>
+    <p>Good day</p>
+    <h5>Happy day</h5>
+</body>
+</html>

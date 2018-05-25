@@ -1,0 +1,37 @@
+﻿<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        .inside {
+            background-color: green;
+            color: yellow;
+        }        
+    </style>
+    <script src="jquery-1.11.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+        // 이벤트 연결을 한 번만 제공 
+           $('h5').one({
+                mouseenter: function () {
+                    $(this).addClass('inside');
+                    $('<img />').attr({ 'src': 'image4.jpg', 'width': 100 }).appendTo('body');
+                },
+                mouseleave: function () {
+                    $(this).removeClass('inside');
+                    $('img').remove();
+                }
+           });
+           $('h5').click(function () { alert('클릭했습니다.'); });
+            // h5 태그에 연결된 모든 이벤트 리스너 제거 
+            //  $('h5').off();
+
+            //  h5 태그에 연결된 mouseenter 이벤트 리스너와 관려된 mouseleave 이벤트 리스너 제거 
+            // $('h5').off('mouseenter');
+        });
+    </script>
+</head>
+<body>
+   <h5>Good day</h5>   
+</body>
+</html>

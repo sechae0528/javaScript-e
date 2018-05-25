@@ -1,0 +1,39 @@
+﻿<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        div {
+            background-color: lightblue;
+            width: 50px;
+            height: 50px;
+            left: 50px;
+            margin: 10px;
+            position: absolute;
+        }       
+    </style>
+    <script src="jquery-1.11.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            //오른쪽 버튼 클릭시 
+            $('button:first').click(function () {
+                // 대입 연산자를 이용하여 이전 스타일 속성 값에 근거하여 
+                // 오른쪽으로 50픽셀 이동  
+                $('div').animate({ 'left': '-=50' }, 'slow');
+            });
+
+            //왼쪽 버튼 클릭시 
+            $('button:last').click(function () {
+                // 대입 연산자를 이용하여 이전 스타일 속성 값에 근거하여 
+                // 왼쪽으로 50픽셀 이동 
+                $('div').animate({ 'left': '+=50' }, 'fast');
+            });
+        });
+    </script>
+</head>
+<body>
+    <button>오른쪽</button>
+    <button>왼쪽</button>   
+    <div></div>
+</body>
+</html>

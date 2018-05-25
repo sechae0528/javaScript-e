@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="jquery-1.11.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // img 요소 노드(문서 객체)를 생성한 후, attr 메서드를 이용하여 속성 추가 
+            // appendTo 메서드를 이용하여 DOM 트리에 연결 
+            // $('<img />').attr('src', 'image6.jpg').appendTo('body');
+
+            // 생성된 img 문서 객체에 2가지 속성 추가 
+            //$('<img />').attr({'src':'image6.jpg','width':100}).appendTo('body');
+
+            // img 문서 객체와 그에 따른 속성 동시 생성 
+            $('<img />', {
+                src: 'image6.jpg',
+                width: 200
+            }).appendTo('body');
+        });
+    </script>
+</head>
+<body>  
+</body>
+</html>

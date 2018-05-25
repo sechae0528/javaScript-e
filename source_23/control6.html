@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>       
+    <script src="jquery-1.11.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            //div 문서 객체들의 내부에 문자열 추가, HTML 태그 인식하여 적용 
+            //$('div').html('<font color="blue">Good day </font>');
+
+
+            //div 문서 객체들의 내부에 문자열 추가, HTML 태그 인식 못함 
+            $('div').text('<font color="blue">Good day </font>');
+        });
+    </script>
+</head>
+<body>
+    <div></div>
+    <div></div>
+</body>
+</html>

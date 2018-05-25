@@ -1,0 +1,33 @@
+﻿<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="jquery-1.11.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // 전달받은 문서 객체의 내부 문자열 값을 1 증가시키는 함수 
+            function plus(i) {
+                var number = parseInt(i.text());
+                i.text(number + 1);
+            }
+            //첫 번째 버튼 click 이벤트 연결 
+            $(':button:first').click(function () {
+                plus($('span:first'));
+            });
+
+            //두 번째 버튼 click 이벤트 연결 
+            $(':button:last').click(function () {
+                //첫 번째 버튼에 click 이벤트 발생 
+                $(':button:first').trigger('click');
+                plus($('span:last'));
+            });
+        });
+    </script>
+</head>
+<body>
+    <p>버튼 1 : <span style="color:blue">0</span>번째 클릭</p>
+    <p>버튼 2 : <span style="color:red">0</span>번째 클릭</p>
+    <input type="button" value="버튼1" />
+    <input type="button" value="버튼2" />
+</body>
+</html>

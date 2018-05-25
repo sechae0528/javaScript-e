@@ -1,0 +1,30 @@
+﻿<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="jquery-1.11.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('a').click(function () {
+                $('<p>Good day</p>').appendTo('body');
+                //기본 이벤트 제거 
+                event.preventDefault();
+                //이벤트 전달 방지
+                event.stopPropagation();
+
+                // 위 2개의 이벤트 객체 메서드 동시 적용 
+                // return false;
+            });
+
+            $('p').click(function () {
+                alert('좋은 날');
+            });
+        });
+    </script>
+</head>
+<body>
+    <p> 
+        <a href="http://hrdi.ekoreatech.ac.kr/">능력개발교육원</a>
+    </p>   
+</body>
+</html>

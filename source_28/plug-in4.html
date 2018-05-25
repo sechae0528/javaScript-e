@@ -1,0 +1,40 @@
+﻿<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style>
+        div{
+            width : 100px;
+            height :30px;
+            padding : 20px;
+            margin : 20px;
+            text-align : center;           
+            color : red;
+            background-color : lightblue;            
+        }
+        .over{
+            color: blue;
+            background-color : aqua;
+        }
+    </style>
+    <script src="jquery-1.11.1.min.js"></script>
+    <script src="jquery-ui.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            //jQuery UI의 색상 변환 애니메이션 지원
+            $('button').click(function () {
+                $('div').animate({
+                    'background-color': 'red',
+                    'color':'white'
+                });
+            });
+            $('div').mouseenter(function () {
+                $('div').addClass('over',1000);
+            });
+        });
+    </script>
+</head>
+<body>
+    <button>animation</button>
+    <div>Good day!!</div>    
+</body>
+</html>

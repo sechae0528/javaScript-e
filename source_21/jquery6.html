@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="jquery-1.11.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            //목록 상자 중 선택된 문서 객체의 value 속성 값을 out에 저장 후 출력  
+            var out = $(':selected').val();
+            alert(out);
+
+            //input 태그 중 type 속성값이 text인 것을 선택하여 초점을 준 후, 스타일 속성 변경 
+            $(':text').focus();
+            $(':focus').css('background-color', 'blue');
+        });
+    </script>
+</head>
+<body>  
+    <select>
+        <option>One</option>
+        <option>Two</option>
+        <option>Three</option>
+        <option>Four</option>
+    </select>
+    <input type="text"/>
+</body>
+</html>

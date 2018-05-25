@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>   
+    <script src="jquery-1.11.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            //img 문서 객체들의 width 속성 값을 100으로 변경 
+            // $('img').attr('width', 100);
+
+            //img 문서 객체들의 값이 200인 height 속성을 추가 
+            //$('img').attr('height',200);
+
+            //width와 height 속성을 동시에 변경 혹은 추가 
+            $('img').attr({ 'width': 100, 'height': 100 });
+        });
+    </script>
+</head>
+<body>
+    <img src="image3.jpg" width="30"/>
+    <img src="image4.jpg" width="30"/>
+    <img src="image5.jpg" width="30"/>
+</body>
+</html>

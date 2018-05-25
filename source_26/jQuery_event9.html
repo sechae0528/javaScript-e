@@ -1,0 +1,26 @@
+﻿<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>  
+    <script src="jquery-1.11.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // 글자 입력을 위해 키보드 키를 눌렀다가 떼는 순간 발생하는 keyup 이벤트
+            $(':text').keyup(function (event) {
+                // event.key는 이벤트가 발생한 키의 글자 정보 포함 
+                $('p:last').text('입력 글자 : ' + event.key);
+                // event.which는 키보드의 keyCode 정보를 담고 있음. 
+                // keyCode 13은 Enter키
+                if (event.which == 13) {
+                    $('<p>입력 글자수' + $(this).val().length + '</p>').appendTo('body');
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+   <p>글자를 입력해 주세요</p>
+   <input type="text" />
+   <p></p>    
+</body>
+</html>

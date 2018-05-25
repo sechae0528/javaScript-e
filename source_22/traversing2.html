@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="jquery-1.11.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            /* 
+            //선택된 li 문서 객체들 중 세 번째 문서 객체 선택 
+            $('li').eq(2).css('background-color', 'blue');
+            */
+
+            /* 
+             //선택된 li 문서 객체들 중 끝에서 첫 번째 문서 객체 선택  
+            $('li').eq(-1).css('background-color', 'blue');
+            */
+
+            /* 
+            //선택된 li 문서 객체들 중 첫 번째 문서 객체  선택 
+              $('li').first().css('background-color', 'green');
+           */
+
+            //선택된 li 문서 객체들 중 마지막 문서 객체  선택 
+            $('li').last().css('background-color', 'green');
+        });
+    </script>
+</head>
+<body>
+    <ul>
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+        <li>Four</li>
+        <li>Five</li>
+    </ul>
+</body>
+</html>

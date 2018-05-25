@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        .inside {
+            background-color: green;
+            color: yellow;
+        }        
+    </style>
+    <script src="jquery-1.11.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            //hover 메서드의 매개 변수는 mouseenter 이벤트 리스너 함수, mouseleave 이벤트 리스너 함수 순으로 입력 
+            $('h5').hover(
+                //mouseenter 이벤트 리스너 함수
+                function () {
+                    $(this).addClass('inside');
+                    $('<img />').attr({ 'src': 'image4.jpg', 'width': 100 }).appendTo('body');
+                },
+               //mouseleave 이벤트 리스너 함수
+               function () {
+                    $(this).removeClass('inside');
+                    $('img').remove();
+                }
+            );
+            $('h5').click(function () {
+                alert('클릭했습니다.');
+            });
+
+        });
+    </script>
+</head>
+<body>
+   <h5>Good day</h5>   
+</body>
+</html>

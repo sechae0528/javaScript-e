@@ -1,0 +1,54 @@
+﻿<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        div {
+            background-color: lightblue;
+            width: 50px;
+            height: 50px;
+            left: 50px;
+            margin: 10px;            
+        }       
+    </style>
+    <script src="jquery-1.11.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // 시작 버튼 클릭 시 
+            $('button').eq(0).click(function () {
+                //실행할 효과 메서드를 큐에 입력 
+                //입력된 순서대로 실행 
+                $('div').animate({ 'width': '70%' }, 1500);
+                $('div').animate({ 'height': '70%' }, 1500);
+                $('div').animate({ 'width': '10%' }, 1500);
+                $('div').animate({ 'height': '10%' }, 1500);
+            });
+
+            // 애니메이션 중지 버튼 클릭 시  
+            $('button').eq(1).click(function () {
+                // 큐에 대기하고 있는 효과 메서드 제거 
+                $('div').clearQueue();
+            });
+
+            //애니메이션 정지 버튼 클릭 시 
+            $('button').eq(2).click(function () {
+                // 실행 중인 애니메이션을 정지하고, 다음 효과 메서드로 이동 
+                // $('div').stop();
+
+                // 실행 중인 애니메이션을 정지하고, 큐에 대기하고 있는 효과 메서드 제거.               
+                // clearQueue() 메서드와 동일한 동작 
+                // $('div').stop(true);
+
+                // 실행 중인 애니메이션을 애니메이션 효과가 종료한 상태로 즉시 이동한 후, 다음 효과 메서드로 이동 
+                $('div').stop(false,true);
+            });
+        });
+    </script>
+</head>
+<body>
+    <button>시작</button>
+    <button>애니메이션 중지</button>
+    <button>애니메이션 정지</button>
+    <div></div>
+</body>
+</html>

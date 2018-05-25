@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="jquery-1.11.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // h4 문서 객체만 선택 
+            // $('h4').css('color', 'green');
+
+            //h4 문서 객체에 추가로 h6 문서 객체 선택 
+            $('h4').add('h6').css('color', 'green');
+        });
+    </script>
+</head>
+<body>
+    <h4>One</h4>
+    <h5>Two</h5>
+    <h6>Three</h6>
+</body>
+</html>

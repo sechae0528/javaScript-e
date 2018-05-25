@@ -1,0 +1,37 @@
+﻿<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style>
+       div{
+           width:20px;
+           height:20px;
+           background-color : orange;         
+           border-radius:50%;
+           position:relative;
+           left:30px;
+       }
+    </style>
+    <script src="jquery-1.11.1.min.js"></script>
+    <script src="jquery-ui.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('button').click(function () {
+                //각기 다른 easing 문자열을 입력하여 결과 비교 
+                $('div').eq(0).animate({ 'left': 300 }, 2000, 'linear');
+                $('div').eq(1).animate({ 'left': 300 }, 2000, 'swing');
+                $('div').eq(2).animate({ 'left': 300 }, 2000, 'easeInBack');
+                $('div').eq(3).animate({ 'left': 300 }, 2000, 'easeOutBounce');
+                $('div').eq(0).delay(5000);
+                $('div').eq(0).fadeOut('clip');
+            });
+        });
+    </script>
+</head>
+<body>
+    <button>start</button>
+    <p>linear : <div></div></p>
+    <p>swing : <div></div></p> 
+    <p>easeInBack : <div></div></p> 
+    <p>easeOutBounce : <div></div></p>    
+</body>
+</html>

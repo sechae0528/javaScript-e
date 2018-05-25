@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="jquery-1.11.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            //type 속성값이 button인 input 태그 중 첫번째 input 태그의 value 값 리턴 
+            /* var out = $('input[type="button"]').val();
+            alert(out);
+            */
+
+            //type 속성값이 button인 input 태그의 value 속성값을 Hello!로 설정 
+            $('input[type="button"]').val('Hello!');
+        });
+    </script>
+</head>
+<body>  
+    <input type="text" /><br />
+    <input type="password" /><br />
+    <input type="button" value="button1" /><br />
+    <input type="button" value="button2" /><br />
+    <input type="submit" value="submit" /><br />    
+    <input type="reset" value="reset" /><br />    
+</body>
+</html>

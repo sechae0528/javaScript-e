@@ -1,0 +1,35 @@
+﻿<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>  
+    <style>
+        .outer {
+            width: 200px;
+            height: 100px;
+            background-color: lightblue;
+            overflow:scroll;
+        }
+    </style>
+    <script src="jquery-1.11.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // div 태그에서 scroll 이벤트가 발생할 경우 
+            // count 변수에 scroll 이벤트 발생 횟수 추가 
+            var count = 0;
+            $('div').scroll(function () {
+                $('p:last').text('스크롤 횟수 : ' + (++count));
+            });
+        });
+    </script>
+</head>
+<body>
+   <div class="outer">
+       <p>미워하는 사람을 만들지 마라.</p>
+       <p>보면 괴로우나니.</p>
+       <p>사랑하는 사람을 만들지 마라.</p>
+       <p>못보면 괴로우나니.</p>
+       <p>by 법구경</p>
+   </div> 
+   <p>0</p>
+</body>
+</html>

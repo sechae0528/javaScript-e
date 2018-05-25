@@ -1,0 +1,37 @@
+﻿<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        div{
+            margin : 10px;
+            padding : 5px;
+        }
+    </style>
+    <script src="jquery-1.11.1.min.js"></script>
+    <script src="jquery-ui.min.js"></script>
+    <script>
+        //jQuery UI 플러그인의 기존 효과 메서드의 추가 기능 제공 
+        //show() 메서드,hide() 메서드,toggle() 메서드에 effect type 지정
+        $(document).ready(function () {
+            $('button').eq(0).click(function () {
+                $('img').show('fold', 1000);
+            });
+            $('button').eq(1).click(function () {
+                $('img').hide('drop', { direction: 'down' }, 'slow');
+            });
+            $('button').eq(2).click(function () {
+                $('img').toggle('explode');
+            });
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <button>Show</button>
+        <button>Hide</button>
+        <button>Toggle</button> 
+    </div>
+    <div><img src="image3.jpg" width="150" style="display:none"/></div>    
+</body>
+</html>

@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="jquery-1.11.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            //h5 문서 객체에서 click 이벤트가 발생했을 때 
+            $('h5').click(function (event) {
+                var target = $(event.target);
+                //이벤트 발생 객체가 h5인지 확인하여 스타일 속성 변경 
+                if (target.is('h5')) {
+                    target.css('color', 'green');
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <h5>One</h5>
+    <h5>Two</h5>
+    <h6>Three</h6>
+</body>
+</html>

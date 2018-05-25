@@ -1,0 +1,39 @@
+﻿<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="jquery-1.11.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            //show 버튼 클릭 
+            $('button').eq(0).click(function () {
+                // 이미지 출력 후,
+                // show() 메서드의 매개 변수로 입력된 함수에 정의된 코드 실행. 대화 상자 출력 
+                $('img').show('slow', function () {
+                    alert('show image');
+                });
+            });
+
+            //hide 버튼 클릭 
+            $('button').eq(1).click(function () {
+                //이미지 화면에서 숨김 
+                $('img').hide();
+                //문자열 화면에 출력 
+                $('h5').show('fast');
+            });
+            //toggle 버튼 클릭 
+            $('button').eq(2).click(function () {
+                //이미지를 화면에 출력하거나 숨김 
+                $('img').toggle();
+            });
+        });
+    </script>
+</head>
+<body>
+    <button>show</button>
+    <button>hide</button> 
+    <button>toggle</button> 
+    <h5 style="display:none">좋은 날</h5>
+    <img src="image4.jpg" style="display:none" width="100"/>
+</body>
+</html>

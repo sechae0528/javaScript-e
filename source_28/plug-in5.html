@@ -1,0 +1,40 @@
+﻿<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style>
+        div{
+            width : 100px;
+            height :30px;
+            padding : 20px;
+            margin : 20px;
+            text-align : center;           
+            color : red;
+            background-color : lightblue;            
+        }         
+
+        .over{
+            width:200px;
+            height:100px;
+            color:blue;
+            background-color:white;
+        }
+    </style>
+    <script src="jquery-1.11.1.min.js"></script>
+    <script src="jquery-ui.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            //마우스가 div 위로 이동시 클래스 추가
+            //클래스 추가될 때 자동 애니메이션 지원 
+            $('div').hover(function () {
+                $(this).addClass('over', 1500);
+            }, function () {
+                //마우스 밖으로 이동시 클래스 제거 
+                $(this).removeClass('over', 1000);
+            });
+        });
+    </script>
+</head>
+<body>   
+    <div>Good day!!</div>    
+</body>
+</html>

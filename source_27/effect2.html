@@ -1,0 +1,33 @@
+﻿<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="jquery-1.11.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            //effect1.html 문서와 거의 유사한 코드
+            //이미지 출력하거나 숨길 때 fadeIn(), fadeOut(),fadeToggle()을 적용하여 페이드 효과가 나타남 
+            $('button').eq(0).click(function () {
+                $('img').fadeIn('slow', function () {
+                    alert('show image');
+                });
+            });
+
+            $('button').eq(1).click(function () {
+                $('img').fadeOut();
+                $('h5').fadeIn('fast');
+            });
+            $('button').eq(2).click(function () {
+                $('img').fadeToggle();
+            });
+        });
+    </script>
+</head>
+<body>
+    <button>show</button>
+    <button>hide</button> 
+    <button>toggle</button> 
+    <h5 style="display:none">좋은 날</h5>
+    <img src="image4.jpg" style="display:none" width="100"/>
+</body>
+</html>

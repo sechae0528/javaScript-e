@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="jquery-1.11.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            setInterval(function () {
+                //append()와 appendTo() 메서드의 삽입 대상이 되는 문서 객체 위치에 유의 
+
+                // appendTo() 메서드를 이용하여 img 문서 객체 중 첫 번째 요소를 body의 마지막으로 이동 
+                $('img').first().appendTo($('body'));
+
+                // append() 메서드를 이용하여 img 문서 객체 중 첫 번째 요소를 body의 마지막으로 이동 
+                //$('body').append($('img').first());
+               
+            }, 2000);
+           
+        });
+    </script>
+</head>
+<body>  
+   
+    <img src="image3.jpg" width="130"/>
+    <img src="image4.jpg" width="130" />
+    <img src="image5.jpg" width="130" />
+</body>
+</html>

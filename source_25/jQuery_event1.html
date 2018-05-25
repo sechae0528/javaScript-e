@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        .inside {
+            background-color: green;
+            color: yellow;
+        }        
+    </style>
+    <script src="jquery-1.11.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            //on 메서드에 문자열과 이벤트 리스너를 매개 변수로 입력하여 h5 태그에 mouseenter 이벤트 연결 
+            /* 
+             $('h5').on('mouseenter', function () {
+                $(this).addClass('inside');
+                $('<img />').attr({ 'src': 'image4.jpg', 'width': 100 }).appendTo('body');
+            });
+            */
+
+            //on 메서드에 이벤트 이름과 이벤트 리스너의 쌍인 객체를 매개 변수로 입력 
+            //h5 태그에 mouseenter, mouseleave 이벤트 연결 
+            $('h5').on({
+                mouseenter: function () {
+                    $(this).addClass('inside');
+                    $('<img />').attr({ 'src': 'image4.jpg', 'width': 100 }).appendTo('body');
+                },
+                mouseleave: function () {
+                    $(this).removeClass('inside');
+                    $('img').remove();
+                }
+            });
+
+        });
+    </script>
+</head>
+<body>
+   <h5>Good day</h5>   
+</body>
+</html>

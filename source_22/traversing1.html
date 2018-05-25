@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="jquery-1.11.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            /* 
+            // li 문서 객체를 가리키는 index를 4로 나누어 0인 문서객체(1,5번째)만 선택 
+            $('li').filter(function (index) {
+                return index % 4 == 0;
+            }).css('background-color', 'green');
+            */
+
+            /* 
+            //length() 메서드는 일치하는 문서 객체의 수를 돌려주는 메서드  
+            //li 문서 객체의 아래에 small 문서 객체가 있을 때 1이 리턴되어 참이 되어 (3,4번째)만 선택 
+            $('li').filter(function (index) {
+                return $('small', this).length == 1;
+            }).css('background-color', 'green');
+            */
+
+            //filter 메서드를 체이닝하여 세번째 목록만 선택
+            $('li').filter(function (index) {
+                return $('small', this).length == 1;
+            }).filter(':first').css('background-color', 'green');
+        });
+    </script>
+</head>
+<body>
+    <ul>
+        <li>One</li>
+        <li>Two</li>
+        <li><small>Three</small></li>
+        <li><small>Four</small></li>
+        <li>Five</li>
+    </ul>
+</body>
+</html>

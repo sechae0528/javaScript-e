@@ -1,0 +1,53 @@
+﻿<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        *{margin:0px;padding:0px}
+        /* 이미지를 보여줄 상자 */
+        .container {
+            width:200px;
+            height:300px;         
+            position:relative;
+            overflow:hidden;
+        }
+        /* 이미지를 담고 있을 상자*/
+        .slider_pannel {
+            width: 800px;
+            position: absolute;
+        }
+        /* 이미지 스타일 조정 */
+        .slider_image {
+            width: 200px;
+            height:300px;
+            float: left;
+        }        
+    </style>
+    <script src="jquery-1.11.1.min.js"></script>
+    <script src="jquery-ui.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var index = 0;
+            //index 값을 1씩 증가하면서 반복 
+            for (index; index < 4; index++) {
+                //index에 200(이미지의 가로)을 곱한 값 만큼 이동
+                var move = -(index * 200);
+                //animate() 메서드를 이용하여 이동 
+                $('.slider_pannel').animate({ left: move }, '3000', 'easeInBounce');
+                $('.slider_pannel').delay(1000);
+            }
+        })
+    </script>
+</head>
+<body>
+    <!--이미지 출력을 위한 기본 구성 -->
+    <div class="container">
+        <div class="slider_pannel">
+            <img src="image3.jpg" class="slider_image" />
+            <img src="image4.jpg" class="slider_image" />
+            <img src="image5.jpg" class="slider_image" />
+            <img src="image6.jpg" class="slider_image" />
+        </div>
+    </div>
+</body>
+</html>
